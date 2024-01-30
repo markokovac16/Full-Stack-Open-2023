@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types';
 
-const StatisticLine = (props) => {
+const StatisticLine = ({ text, value }) => {
   return (
-    <div>
-      <p>
-        {props.text} {props.value}
-      </p>
-    </div>
+    <tr>
+      <td>{text}</td>
+      <td>{value}</td>
+    </tr>
   );
 };
 
 StatisticLine.propTypes = {
-  text: PropTypes.string,
-  value: PropTypes.number,
+  text: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
 };
 
 export default StatisticLine;
